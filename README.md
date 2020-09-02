@@ -4,7 +4,7 @@ An app to register music instrument for test.
 ## Requirements
 
 The requirements to run this project include:
-* ??
+* ruby 2.5.8
 
 ## Installation
 
