@@ -37,13 +37,13 @@ jobs:
     - name: Install dependencies
       run: bundle install
       env:
-        RAILS_ENV: test
+        DATABASE_URL: test
         POSTGRES_USER: postgres
         POSTGRES_PASSWORD: postgres
     - name: Run tests
       run: |
         bundle exec rake
       env:
-        RAILS_ENV: test
+        DATABASE_URL: test
         POSTGRES_USER: postgres
         POSTGRES_PASSWORD: postgres
