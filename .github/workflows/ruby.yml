@@ -18,8 +18,7 @@ jobs:
       - name: Install dependent libraries
         run: sudo apt-get install libpq-dev
       - name: Bundle Install
-        run: |
-          bundle install --jobs 4 --retry 3
+        run: bundle install
       - name: Setup Database
         run: |
           bundle exec rake db:create
