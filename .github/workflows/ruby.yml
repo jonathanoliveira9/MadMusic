@@ -35,7 +35,9 @@ jobs:
       with:
         ruby-version: 2.5.8
     - name: Install dependencies
-      run: bundle install
+      run: |
+        bundle install
+        sudo apt-get install libpq-dev
       env:
         DATABASE_URL: test
         POSTGRES_USER: postgres
