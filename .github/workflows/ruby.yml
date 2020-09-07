@@ -38,6 +38,7 @@ jobs:
       run: |
         bundle install
         sudo apt-get install libpq-dev
+        sudo service postgresql start
       env:
         DATABASE_URL: test
         POSTGRES_USER: postgres
