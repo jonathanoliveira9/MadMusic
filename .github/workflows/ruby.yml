@@ -45,7 +45,8 @@ jobs:
         POSTGRES_PASSWORD: postgres
     - name: Run tests
       run: |
-        bundle exec rake
+        bundle exec rake db:setup
+        bundle exec rspec
       env:
         DATABASE_URL: test
         POSTGRES_USER: postgres
