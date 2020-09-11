@@ -1,6 +1,6 @@
 # MadMusic
 An app to register music instrument for test.
-[![Tests](https://github.com/jonathanoliveira9/MadMusic/workflows/CI/badge.svg)]
+![Tests](https://github.com/jonathanoliveira9/MadMusic/workflows/CI/badge.svg)
 
 ## Requirements
 
