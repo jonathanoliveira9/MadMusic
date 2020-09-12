@@ -5,4 +5,11 @@ class InstrumentsController < ApplicationController
       format.html
     end
   end
+
+  def show
+    @instrument = Instrument.find(params[:id])
+    respond_to do |format|
+      format.html
+    end
+  end
 end
