@@ -23,5 +23,13 @@ RSpec.describe InstrumentsController, type: :controller do
     it `has 200 status code` do
       expect(response).to have_http_status(:ok)
     end
+
+    it `assigns @instrument` do
+      expect(assigns(:instrument)).to eq(instrument)
+    end
+
+    it `render the :show template` do
+      expect(response).to render_template :show
+    end
   end
 end
