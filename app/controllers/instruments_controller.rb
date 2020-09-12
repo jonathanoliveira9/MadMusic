@@ -12,4 +12,8 @@ class InstrumentsController < ApplicationController
       format.html
     end
   end
+
+  def new
+    @instrument = Instrument.new
+  end
 end

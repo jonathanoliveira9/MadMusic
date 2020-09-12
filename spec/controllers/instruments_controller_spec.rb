@@ -32,4 +32,19 @@ RSpec.describe InstrumentsController, type: :controller do
       expect(response).to render_template :show
     end
   end
+
+  describe `GET #new` do
+    before { get :new, params: {} }
+    it `has 200 status code` do
+      expect(response).to have_http_status(:ok)
+    end
+
+    it `assings new @article` do
+      expect(assigns(:instrument)).to be_a_new Instrument
+    end
+
+    it `render the :new template` do
+      expect(response).to render_template :new
+    end
+  end
 end
