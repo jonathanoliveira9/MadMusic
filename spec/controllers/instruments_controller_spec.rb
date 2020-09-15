@@ -47,4 +47,23 @@ RSpec.describe InstrumentsController, type: :controller do
       expect(response).to render_template :new
     end
   end
+
+  describe 'POST #create' do
+    let(:instrument_params) { attributes_for(:instrument) }
+
+    it 'saves new instrument' do
+      expect do
+        post :create, params: { instrument: instrument_params }
+      end.to change(Instrument, :count).by(1)
+      expect(response).to redirect_to Instrument.last
+    end
+
+    it 'don´t save instrument' do
+      expect do
+        instrument_params.shift
+        post :create, params: { instrument: instrument_params }
+      end.to change(Instrument, :count).by(0)
+      expect(response).to render_template(:new)
+    end
+  end
 end

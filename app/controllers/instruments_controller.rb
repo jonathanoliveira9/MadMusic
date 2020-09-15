@@ -16,4 +16,21 @@ class InstrumentsController < ApplicationController
   def new
     @instrument = Instrument.new
   end
+
+  def create
+    @instrument = Instrument.new(instrument_params)
+    respond_to do |format|
+      if @instrument.save
+        format.html { redirect_to @instrument, notice: 'Instrument was successfully created'}
+      else
+        format.html { render :new }
+      end
+    end
+  end
+
+  private
+
+  def instrument_params
+    params.require(:instrument).permit(:serie, :description, :line, :price)
+  end
 end
