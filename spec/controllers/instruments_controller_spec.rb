@@ -66,4 +66,28 @@ RSpec.describe InstrumentsController, type: :controller do
       expect(response).to render_template(:new)
     end
   end
+
+  describe 'PATCH #update' do
+    let(:instrument) { create(:instrument) }
+    let(:update_attrs) { { price: 0, description: 'none' } }
+
+    it 'update changes' do
+      expect do
+        patch :update, params: { id: instrument.id, instrument: update_attrs }
+      end.to change(Instrument, :count).by(1)
+      expect(response).to redirect_to Instrument.last
+    end
+
+    it 'update instrument' do
+      patch :update, params: { id: instrument.id, instrument: update_attrs }
+      instrument.reload
+      expect(instrument.price).to eq update_attrs[:price].to_s
+      expect(instrument.description).to eq update_attrs[:description]
+    end
+
+    it 'render the :edit template' do
+      patch :update, params: { id: instrument.id, instrument: { price: nil }}
+      expect(response).to render_template(:edit)
+    end
+  end
 end

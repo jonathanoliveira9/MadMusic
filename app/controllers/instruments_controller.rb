@@ -28,6 +28,17 @@ class InstrumentsController < ApplicationController
     end
   end
 
+  def update
+    @instrument = Instrument.find(params[:id])
+    respond_to do |format|
+      if @instrument.update(instrument_params)
+        format.html { redirect_to @instrument, notice: 'Instrument was successfully updated' }
+      else
+        format.html { render :edit }
+      end
+    end
+  end
+
   private
 
   def instrument_params
