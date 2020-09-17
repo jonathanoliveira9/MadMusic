@@ -86,8 +86,21 @@ RSpec.describe InstrumentsController, type: :controller do
     end
 
     it 'render the :edit template' do
-      patch :update, params: { id: instrument.id, instrument: { price: nil }}
+      patch :update, params: { id: instrument.id, instrument: { price: nil } }
       expect(response).to render_template(:edit)
+    end
+  end
+
+  describe 'DELETE #destroy' do
+    let(:instrument) { create(:instrument) }
+    it 'delete the instrument' do
+      expect do
+        delete :destroy, params: { id: instrument.id }
+      end.to change(Instrument, :count).by(0)
+    end
+    it 'redirects the index template' do
+      delete :destroy, params: { id: instrument.id }
+      expect(response).to redirect_to(instruments_path)
     end
   end
 end

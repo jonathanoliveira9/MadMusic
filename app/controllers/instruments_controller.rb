@@ -39,6 +39,14 @@ class InstrumentsController < ApplicationController
     end
   end
 
+  def destroy
+    @instrument = Instrument.find(params[:id])
+    respond_to do |format|
+      @instrument.destroy
+      format.html { redirect_to instruments_path, notice: 'Instrument was successfully deleted' }
+    end
+  end
+
   private
 
   def instrument_params
