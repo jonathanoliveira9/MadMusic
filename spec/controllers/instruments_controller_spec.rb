@@ -50,10 +50,11 @@ RSpec.describe InstrumentsController, type: :controller do
 
   describe 'POST #create' do
     let(:instrument_params) { attributes_for(:instrument) }
+    let(:brand) { create(:brand) }
 
     it 'saves new instrument' do
       expect do
-        post :create, params: { instrument: instrument_params }
+        post :create, params: { instrument: instrument_params.merge({brand_id: brand.id})}
       end.to change(Instrument, :count).by(1)
       expect(response).to redirect_to Instrument.last
     end
