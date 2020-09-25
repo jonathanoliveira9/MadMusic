@@ -28,6 +28,10 @@ class BrandsController < ApplicationController
     end
   end
 
+  def edit
+    @brand = Brand.find(params[:id])
+  end
+
   def update
     @brand = Brand.find(params[:id])
     respond_to do |format|
