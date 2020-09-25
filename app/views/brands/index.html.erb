@@ -1,0 +1,13 @@
+<h1>Index</h1>
+<table>
+  <tr>
+    <th>Fantasy Name</th>
+    <th>Description</th>
+  </tr>
+  <% @brands.each do |brand| %>
+    <tr>
+      <td><%= brand.fantasy_name %></td>
+      <td><%= brand.description %></td>
+    </tr>
+  <% end %>
+</table>
