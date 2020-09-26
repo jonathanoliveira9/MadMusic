@@ -1,0 +1,17 @@
+<h1>Index</h1>
+<table>
+  <tr>
+    <th>Serie</th>
+    <th>Line</th>
+    <th>Price</th>
+    <th>Description</th>
+  </tr>
+  <% @instruments.each do |instrument| %>
+    <tr>
+      <td><%= instrument.serie %></td>
+      <td><%= instrument.line %></td>
+      <td>$ <%= instrument.price %></td>
+      <td><%= instrument.description %></td>
+    </tr>
+  <% end %>
+</table>

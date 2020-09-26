@@ -28,6 +28,10 @@ class InstrumentsController < ApplicationController
     end
   end
 
+  def edit
+    @instrument = Instrument.find(params[:id])
+  end
+
   def update
     @instrument = Instrument.find(params[:id])
     respond_to do |format|
