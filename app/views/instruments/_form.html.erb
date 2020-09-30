@@ -16,7 +16,7 @@
 
   <p>
     <%= form.label :brand %>
-    <%= form.text_field :brand_id %>
+    <%= form.select :brand_id, Brand.all.map { |brand| [brand.fantasy_name, brand.id] } %>
   </p>
 
   <p>
