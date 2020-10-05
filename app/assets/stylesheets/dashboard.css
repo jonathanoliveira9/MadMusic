@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -30,14 +32,12 @@ h1 {
   margin: 6px 0;
 }
 
-/* The dropdown container */
 .dropdown {
   float: right;
   overflow: hidden;
   margin-right: 20px;
 }
 
-/* Dropdown button */
 .dropdown .dropbtn {
   font-size: 16px;
   color: white;
@@ -50,7 +50,6 @@ h1 {
   margin: 0;
 }
 
-/* Driodown Content (Hidden by Default) */
 
 .dropdown-content {
   display: none;
@@ -63,7 +62,6 @@ h1 {
   z-index: 1;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
   float: none;
   color: #000;
@@ -72,19 +70,15 @@ h1 {
   text-align: left;
 }
 
-/* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
   background-color: transparent;
-
 }
 
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
 
-/* TopBanner with text align in center*/
 .mm-topBanner {
   width: 100%;
   text-align: center;
@@ -107,7 +101,6 @@ h1 {
 .mm-content {
   width: 100%;
   height: auto;
-  /* overflow: hidden; */
 }
 
 .mm-content>img {
@@ -164,14 +157,7 @@ h1 {
   transform: rotate(-180deg);
   left: 11px;
 }
-/* Font */
 
-@font-face {
-  font-family: "Righteous, cursive";
-  src: url(/font/Righteous-Regular.ttf);
-}
-
-/* Utilitaries */
 
 .mm-bk-black {
   background-color: #000;

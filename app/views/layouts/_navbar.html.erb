@@ -1,14 +1,22 @@
 <div class="mm-navtop mm-bk-black">
-  <a href="#">MAD-MUSIC</a>
+  <%= link_to 'MAD-MUSIC', root_path %>
+  <div class="dropdown">
+    <div class="dropbtn mn-bk-black">
+     <button class="dropbtn mm-bk-black dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="mm-icon-bar mm-bk-white"></div>
+        <div class="mm-icon-bar mm-bk-white"></div>
+        <div class="mm-icon-bar mm-bk-white"></div>
+      </button>
+    </div>
+  </div>
   <div class="dropdown">
     <button class="dropbtn mm-bk-black">
       <div class="mm-icon-bar mm-bk-white"></div>
       <div class="mm-icon-bar mm-bk-white"></div>
       <div class="mm-icon-bar mm-bk-white"></div>
-    </button>
-    <div class="dropdown-content">
-      <a href="#">SIGNUP</a>
-      <a href="#">SIGN IN</a>
+    <div class="dropdown-menu">
+      <a href="#" class="dropdown-item">SIGNUP</a>
+      <a href="#" class="dropdown-item">SIGN IN</a>
     </div>
   </div>
 </div>
