@@ -34,50 +34,37 @@ h1 {
 
 .dropdown {
   float: right;
-  overflow: hidden;
-  margin-right: 20px;
+  position: relative;
+  display: inline-block;
 }
-
-.dropdown .dropbtn {
-  font-size: 16px;
+.dropbtn {
+  background-color: #4CAF50;
   color: white;
-  padding: 2px 20px;
+  padding: 16px;
+  font-size: 16px;
   border: none;
-  outline: none;
-  cursor: pointer;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
 }
-
-
 .dropdown-content {
+ 
   display: none;
-  position: absolute;
-  background-color: #f1f1f1;
+  position: fixed;
+  background-color: black;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  top: 60px;
-  right: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
-
+/* Links inside the dropdown */
 .dropdown-content a {
-  float: none;
-  color: #000;
+  color:white;
   text-decoration: none;
   display: block;
-  text-align: left;
 }
-
-.dropdown-content a:hover {
-  background-color: transparent;
-}
-
 .dropdown:hover .dropdown-content {
   display: block;
+  top: 25px;
+  right: 80px;
 }
-
+.dropdown:hover .dropbtn {background-color:black;}
 
 .mm-topBanner {
   width: 100%;
