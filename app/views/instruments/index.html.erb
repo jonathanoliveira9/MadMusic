@@ -1,17 +1,16 @@
-<h1>Index</h1>
-<table>
-  <tr>
-    <th>Serie</th>
-    <th>Line</th>
-    <th>Price</th>
-    <th>Description</th>
-  </tr>
-  <% @instruments.each do |instrument| %>
-    <tr>
-      <td><%= instrument.serie %></td>
-      <td><%= instrument.line %></td>
-      <td>$ <%= instrument.price %></td>
-      <td><%= instrument.description %></td>
-    </tr>
-  <% end %>
-</table>
+<div class="container">
+  <div class="row">
+    <% @instruments.each do |instrument| %>
+      <div class="card m-2" style="width: 20rem;">
+        <%= image_tag 'card_default.png', class: 'card-img-top' %>
+        <div class="card-body">
+          <h5 class="card-title"><%= instrument.brand.fantasy_name %> - <%= instrument.serie %></h5>
+          <h6 class="card-subtitle mb-2 text-muted"><b>Price: R$</b> <%= instrument.price %></h6>
+          <p class="card-text"><%= instrument.description %></p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
