@@ -1,7 +1,8 @@
-<hr>
-<div class="container">
-  <div>
-    <%= link_to 'New', new_brand_path, class: "btn btn-dark"  %>
+<div class="p-4">
+  <div class="container">
+    <div>
+      <%= link_to 'New', new_brand_path, class: "btn btn-dark"  %>
+    </div>
   </div>
 </div>
 <div class="container">
@@ -12,9 +13,10 @@
           <li class="list-group-item list-group-item-action"><b><%= brand.fantasy_name%></b> - <%= brand.description%></li>  
         <% end %>
       </ul>
+      <%= will_paginate(@brands, renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer)%>
     </div>
     <div class="col-8" >
-      <div class="card" style="width: 25rem; height: 30rem;">
+      <div class="card" style="width: 25rem; height: 25rem;">
         <img class="card-img-top" src="..." alt="Card image cap">
           <div class="card-body">
         <h5 class="card-title">Preview</h5>

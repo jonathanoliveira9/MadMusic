@@ -1,6 +1,6 @@
 class BrandsController < ApplicationController
   def index
-    @brands = Brand.all
+    @brands = Brand.paginate(page: params[:page])
     respond_to do |format|
       format.html
     end
