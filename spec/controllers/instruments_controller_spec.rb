@@ -56,7 +56,7 @@ RSpec.describe InstrumentsController, type: :controller do
       expect do
         post :create, params: { instrument: instrument_params.merge({brand_id: brand.id})}
       end.to change(Instrument, :count).by(1)
-      expect(response).to redirect_to Instrument.last
+      expect(response).to redirect_to instruments_path
     end
 
     it 'don´t save instrument' do
@@ -76,7 +76,7 @@ RSpec.describe InstrumentsController, type: :controller do
       expect do
         patch :update, params: { id: instrument.id, instrument: update_attrs }
       end.to change(Instrument, :count).by(1)
-      expect(response).to redirect_to Instrument.last
+      expect(response).to redirect_to instruments_path
     end
 
     it 'update instrument' do

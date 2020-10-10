@@ -55,7 +55,7 @@ RSpec.describe BrandsController, type: :controller do
       expect do
         post :create, params: { brand: brand_params }
       end.to change(Brand, :count).by(1)
-      expect(response).to redirect_to Brand.last
+      expect(response).to redirect_to brands_path
     end
 
     it 'don´t save brand' do
