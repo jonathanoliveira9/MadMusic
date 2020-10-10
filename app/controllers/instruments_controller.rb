@@ -21,7 +21,7 @@ class InstrumentsController < ApplicationController
     @instrument = Instrument.new(instrument_params)
     respond_to do |format|
       if @instrument.save
-        format.html { redirect_to @instrument, notice: 'Instrument was successfully created'}
+        format.html { redirect_to instruments_path, notice: 'Instrument was successfully created'}
       else
         format.html { render :new }
       end
@@ -36,7 +36,7 @@ class InstrumentsController < ApplicationController
     @instrument = Instrument.find(params[:id])
     respond_to do |format|
       if @instrument.update(instrument_params)
-        format.html { redirect_to @instrument, notice: 'Instrument was successfully updated' }
+        format.html { redirect_to instruments_path, notice: 'Instrument was successfully updated' }
       else
         format.html { render :edit }
       end
