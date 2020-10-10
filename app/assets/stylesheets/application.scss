@@ -18,3 +18,11 @@ a {
   text-decoration: none;
   color: black;
 }
+
+.page-item.active .page-link {
+  background-color:black;
+  border-color: white;
+}
+.page-link {
+ color: black; 
+}
