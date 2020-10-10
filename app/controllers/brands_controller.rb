@@ -21,7 +21,7 @@ class BrandsController < ApplicationController
     @brand = Brand.new(brands_params)
     respond_to do |format|
       if @brand.save
-        format.html { redirect_to @brand, notice: 'Brand was successfully created'}
+        format.html { redirect_to brands_path, notice: 'Brand was successfully created'}
       else
         format.html { render :new }
       end
