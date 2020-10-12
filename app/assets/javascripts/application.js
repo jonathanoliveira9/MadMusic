@@ -18,7 +18,9 @@
 //= require popper
 //= require bootstrap
 //= require toastr
-
+//= require jquery_ujs
+//= require jquery-ui/widgets/autocomplete
+//= require autocomplete-rails
 
 $(document).ready(function() {
   toastr.options = {
