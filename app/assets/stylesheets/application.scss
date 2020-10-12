@@ -13,6 +13,8 @@
  */
 
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import "toastr";
 
 a {
   text-decoration: none;
@@ -27,7 +29,6 @@ a {
  color: black; 
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 * {
   box-sizing: border-box;
