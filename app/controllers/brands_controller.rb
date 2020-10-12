@@ -1,6 +1,6 @@
 class BrandsController < ApplicationController
   def index
-    @brands = Brand.all
+    @brands = Brand.paginate(page: params[:page])
     respond_to do |format|
       format.html
     end
@@ -21,7 +21,7 @@ class BrandsController < ApplicationController
     @brand = Brand.new(brands_params)
     respond_to do |format|
       if @brand.save
-        format.html { redirect_to brands_path, notice: 'Brand was successfully created'}
+        format.html { redirect_to brands_path, flash: { success: 'Brand was successfully created' } }
       else
         format.html { render :new }
       end
@@ -36,7 +36,7 @@ class BrandsController < ApplicationController
     @brand = Brand.find(params[:id])
     respond_to do |format|
       if @brand.update(brands_params)
-        format.html { redirect_to @brand, notice: 'Brand was successfully updated' }
+        format.html { redirect_to @brand, flash: { success: 'Brand was successfully created' }}
       else
         format.html { render :edit }
       end
@@ -47,7 +47,7 @@ class BrandsController < ApplicationController
     @brand = Brand.find(params[:id])
     respond_to do |format|
       @brand.destroy
-      format.html { redirect_to brands_path, notice: 'Brand was successfully deleted' }
+      format.html { redirect_to brands_path, flash: { success: 'Brand was successfully deleted' } }
     end
   end
 

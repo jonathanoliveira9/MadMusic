@@ -13,13 +13,22 @@
  */
 
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import "toastr";
 
 a {
   text-decoration: none;
   color: black;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+.page-item.active .page-link {
+  background-color:black;
+  border-color: white;
+}
+.page-link {
+ color: black; 
+}
+
 
 * {
   box-sizing: border-box;

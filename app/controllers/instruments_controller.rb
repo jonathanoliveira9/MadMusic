@@ -1,6 +1,6 @@
 class InstrumentsController < ApplicationController
   def index
-    @instruments = Instrument.all
+    @instruments = Instrument.paginate(page: params[:page])
     respond_to do |format|
       format.html
     end
@@ -21,8 +21,9 @@ class InstrumentsController < ApplicationController
     @instrument = Instrument.new(instrument_params)
     respond_to do |format|
       if @instrument.save
-        format.html { redirect_to instruments_path, notice: 'Instrument was successfully created'}
+        format.html { redirect_to instruments_path, flash: { success: 'Instrument was successfully created'} }
       else
+        flash['error'] = @instrument.errors.full_messages
         format.html { render :new }
       end
     end
@@ -36,8 +37,9 @@ class InstrumentsController < ApplicationController
     @instrument = Instrument.find(params[:id])
     respond_to do |format|
       if @instrument.update(instrument_params)
-        format.html { redirect_to instruments_path, notice: 'Instrument was successfully updated' }
+        format.html { redirect_to instruments_path, flash: { success: 'Instrument was updated'} }
       else
+        flash[:error] = @instrument.errors.full_messages
         format.html { render :edit }
       end
     end
@@ -47,7 +49,7 @@ class InstrumentsController < ApplicationController
     @instrument = Instrument.find(params[:id])
     respond_to do |format|
       @instrument.destroy
-      format.html { redirect_to instruments_path, notice: 'Instrument was successfully deleted' }
+      format.html { redirect_to instruments_path, flash: { error: 'Instrument was successfully deleted' } }
     end
   end
 
