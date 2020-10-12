@@ -1,8 +1,14 @@
 class BrandsController < ApplicationController
+  autocomplete :brand, :fantasy_name
+
   def index
     @brands = Brand.paginate(page: params[:page])
     respond_to do |format|
       format.html
+      if params[:term].present?
+        @brands = Brand.where('fantasy_name LIKE ?', "%#{params[:term]}%")
+        render json: @brands.map { |b| "#{b.fantasy_name}" }
+      end
     end
   end
 
