@@ -1,20 +1,16 @@
-<div class="mm-navtop mm-bk-black">
-  <%= link_to 'MAD-MUSIC', root_path %>
-  <div class="dropdown">
-    <button class="dropbtn mm-bk-black">
-      <div class="mm-icon-bar mm-bk-white"></div>
-      <div class="mm-icon-bar mm-bk-white"></div>
-      <div class="mm-icon-bar mm-bk-white"></div>
-    <div class="dropdown-content">
+<nav class="navbar navbar-dark bg-dark">
+  <%= link_to 'MAD-MUSIC', root_path, class: 'navbar-brand' %>
+  <div class="dropdown show">
+    <a class="dropdown" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <div class="dropdown dropdown-menu-lg">
+        <div class="mm-icon-bar mm-bk-white"></div>
+        <div class="mm-icon-bar mm-bk-white"></div>
+        <div class="mm-icon-bar mm-bk-white"></div>
+      </div>
+    </a>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
       <a href="#">SIGNUP</a>
       <a href="#">SIGN IN</a>
     </div>
   </div>
-</div>
-<div class="mm-topBanner">
-  <p>
-  <%= link_to 'GUITARS', instruments_path %>
-  <%= link_to 'INSTRUMENTS', instruments_path %>
-  <%= link_to 'BRANDS', brands_path %>
-  </p>
-</div>
+</nav>
