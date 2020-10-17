@@ -15,6 +15,7 @@ class InstrumentsController < ApplicationController
 
   def new
     @instrument = Instrument.new
+    @brands = Brand.all
   end
 
   def create
