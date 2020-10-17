@@ -12,6 +12,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 
 gem 'toastr-rails'
+gem 'select2-rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
