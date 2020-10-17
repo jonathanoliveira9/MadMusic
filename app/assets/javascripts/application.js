@@ -18,6 +18,7 @@
 //= require popper
 //= require bootstrap
 //= require toastr
+//= require select2-full
 
 
 $(document).ready(function() {
