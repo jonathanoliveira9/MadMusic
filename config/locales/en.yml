@@ -46,6 +46,8 @@ en:
       price: Price
     new:
       register_instrument: Register Instrument
+    edit:
+      edit_instrument: Edit Instrument
   layouts:
     header:
       instruments_title: INSTRUMENTS

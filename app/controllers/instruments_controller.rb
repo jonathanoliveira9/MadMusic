@@ -32,6 +32,7 @@ class InstrumentsController < ApplicationController
 
   def edit
     @instrument = Instrument.find(params[:id])
+    @brands = Brand.all
   end
 
   def update

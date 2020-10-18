@@ -15,6 +15,8 @@ pt-BR:
       price: Preço R$
     new:
       register_instrument: Registrar Instrumento
+    edit:
+      edit_instrument: Editar Instrumento
   layouts:
     header:
       instruments_title: INSTRUMENTOS
