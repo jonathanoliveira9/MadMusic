@@ -8,7 +8,7 @@
 
 <div class="container">
   <div>
-    <%= link_to 'New', new_instrument_path, class: "btn btn-dark"  %>
+    <%= link_to t('.new'), new_instrument_path, class: "btn btn-dark"  %>
   </div>
 </div>
 <div class="container">
@@ -18,7 +18,7 @@
         <%= image_tag 'card_default.png', class: 'card-img-top' %>
         <div class="card-body">
           <h5 class="card-title"><%= instrument.brand.fantasy_name %> - <%= instrument.serie %></h5>
-          <h6 class="card-subtitle mb-2 text-muted"><b>Price: R$</b> <%= instrument.price %></h6>
+          <h6 class="card-subtitle mb-2 text-muted"><b><%= t('.price') %>:</b> <%= instrument.price %></h6>
           <p class="card-text"><%= instrument.description %></p>
           <%= link_to  edit_instrument_path(instrument),  class: 'card-link', style: 'text-decoration:none;' do %>
             <i class="fas fa-pen-square"></i>

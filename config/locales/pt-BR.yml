@@ -1,4 +1,8 @@
 pt-BR:
+  instruments:
+    index:
+      new: Novo
+      price: Preço R$
   layouts:
     header:
       instruments_title: INSTRUMENTOS
@@ -9,3 +13,18 @@ pt-BR:
   dashboards:
     index:
       sign_up: CADASTRAR
+  will_paginate:
+    next_label: Próximos &#8594;
+    page_entries_info:
+      multi_page: Exibindo %{model} %{from} - %{to} de %{count} no total
+      multi_page_html: Exibindo %{model} <b>%{from}&nbsp;-&nbsp;%{to}</b> de <b>%{count}</b> no total
+      single_page:
+        one: Exibindo 1 %{model}
+        other: Exibindo todos os %{count} %{model}
+        zero: Nenhum %{model} encontrado
+      single_page_html:
+        one: Exibindo <b>1</b> %{model}
+        other: Exibindo <b>todos os&nbsp;%{count}</b> %{model}
+        zero: Nenhum %{model} encontrado
+    page_gap: "&hellip;"
+    previous_label: "&#8592; Anteriores"
