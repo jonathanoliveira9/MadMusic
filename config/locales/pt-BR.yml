@@ -1,8 +1,20 @@
 pt-BR:
+  new: Novo
+  update: Atualizar
+  activerecord:
+    model:
+      instrument:
+        serie: Serie
+        line: Linha
+        price: Preço
+        brand: Marca
+        description: Descrição
   instruments:
     index:
       new: Novo
       price: Preço R$
+    new:
+      register_instrument: Registrar Instrumento
   layouts:
     header:
       instruments_title: INSTRUMENTOS

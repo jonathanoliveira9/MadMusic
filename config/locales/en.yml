@@ -30,10 +30,22 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  new: New
+  update: Update
+  activerecord:
+    model:
+      instrument:
+        serie: Serie
+        line: Line
+        price: Price
+        brand: Brand
+        description: Description
   instruments:
     index:
       new: New
       price: Price
+    new:
+      register_instrument: Register Instrument
   layouts:
     header:
       instruments_title: INSTRUMENTS
