@@ -1,7 +1,12 @@
 <div class="mm-topBanner">
   <p>
-  <%= link_to 'GUITARS', instruments_path %>
-  <%= link_to 'INSTRUMENTS', instruments_path %>
-  <%= link_to 'BRANDS', brands_path %>
+  <%= link_to t('.instruments_title'), instruments_path %>
+  <%= link_to t('.brands_title'), brands_path %>
   </p>
+  <a href="<%= request.path %>?locale=en">
+    <span class="flag-icon flag-icon-us"></span>
+  </a>
+  <a href="<%= request.path %>?locale=pt-BR">
+    <span class="flag-icon flag-icon-br"></span>
+  </a>
 </div>

@@ -1,0 +1,52 @@
+pt-BR:
+  new: Novo
+  update: Atualizar
+  activerecord:
+    model:
+      instrument:
+        serie: Serie
+        line: Linha
+        price: Preço
+        brand: Marca
+        description: Descrição
+      brand:
+        description: Descrição
+        fantasy_name: Nome Fantasia
+  brands:
+    index:
+      new: Novo
+    new:
+      register_brand: Registrar Marca
+  instruments:
+    index:
+      new: Novo
+      price: Preço R$
+    new:
+      register_instrument: Registrar Instrumento
+    edit:
+      edit_instrument: Editar Instrumento
+  layouts:
+    header:
+      instruments_title: INSTRUMENTOS
+      brands_title: MARCAS
+    navbar:
+      sign_up: CADASTRAR
+      sign_in: LOGIN
+  dashboards:
+    index:
+      sign_up: CADASTRAR
+  will_paginate:
+    next_label: Próximos &#8594;
+    page_entries_info:
+      multi_page: Exibindo %{model} %{from} - %{to} de %{count} no total
+      multi_page_html: Exibindo %{model} <b>%{from}&nbsp;-&nbsp;%{to}</b> de <b>%{count}</b> no total
+      single_page:
+        one: Exibindo 1 %{model}
+        other: Exibindo todos os %{count} %{model}
+        zero: Nenhum %{model} encontrado
+      single_page_html:
+        one: Exibindo <b>1</b> %{model}
+        other: Exibindo <b>todos os&nbsp;%{count}</b> %{model}
+        zero: Nenhum %{model} encontrado
+    page_gap: "&hellip;"
+    previous_label: "&#8592; Anteriores"

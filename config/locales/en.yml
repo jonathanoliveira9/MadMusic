@@ -30,4 +30,39 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  new: New
+  update: Update
+  activerecord:
+    model:
+      instrument:
+        serie: Serie
+        line: Line
+        price: Price
+        brand: Brand
+        description: Description
+      brand:
+        description: Descrição
+        fantasy_name: Nome Fantasia
+  brands:
+    index:
+      new: Novo
+    new:
+      register_brand: Register Brand
+  instruments:
+    index:
+      new: New
+      price: Price
+    new:
+      register_instrument: Register Instrument
+    edit:
+      edit_instrument: Edit Instrument
+  layouts:
+    header:
+      instruments_title: INSTRUMENTS
+      brands_title: BRANDS
+    navbar:
+      sign_up: SIGN-UP
+      sign_in: SIGN-IN
+  dashboards:
+    index:
+      sign_up: SIGN-UP
