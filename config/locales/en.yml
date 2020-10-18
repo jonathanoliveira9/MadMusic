@@ -40,6 +40,14 @@ en:
         price: Price
         brand: Brand
         description: Description
+      brand:
+        description: Descrição
+        fantasy_name: Nome Fantasia
+  brands:
+    index:
+      new: Novo
+    new:
+      register_brand: Register Brand
   instruments:
     index:
       new: New

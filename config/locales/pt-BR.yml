@@ -9,6 +9,14 @@ pt-BR:
         price: Preço
         brand: Marca
         description: Descrição
+      brand:
+        description: Descrição
+        fantasy_name: Nome Fantasia
+  brands:
+    index:
+      new: Novo
+    new:
+      register_brand: Registrar Marca
   instruments:
     index:
       new: Novo
