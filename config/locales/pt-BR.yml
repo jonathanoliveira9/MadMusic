@@ -1,0 +1,11 @@
+pt-BR:
+  layouts:
+    header:
+      instruments_title: INSTRUMENTOS
+      brands_title: MARCAS
+    navbar:
+      sign_up: CADASTRAR
+      sign_in: LOGIN
+  dashboards:
+    index:
+      sign_up: CADASTRAR

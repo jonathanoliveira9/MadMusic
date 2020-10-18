@@ -30,4 +30,13 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  layouts:
+    header:
+      instruments_title: INSTRUMENTS
+      brands_title: BRANDS
+    navbar:
+      sign_up: SIGN-UP
+      sign_in: SIGN-IN
+  dashboards:
+    index:
+      sign_up: SIGN-UP
