@@ -6,13 +6,6 @@ class BrandsController < ApplicationController
     end
   end
 
-  def show
-    @brand = Brand.find(params[:id])
-    respond_to do |format|
-      format.html
-    end
-  end
-
   def new
     @brand = Brand.new
   end
@@ -36,7 +29,7 @@ class BrandsController < ApplicationController
     @brand = Brand.find(params[:id])
     respond_to do |format|
       if @brand.update(brands_params)
-        format.html { redirect_to @brand, flash: { success: 'Brand was successfully created' }}
+        format.html { redirect_to brands_path, flash: { success: 'Brand was successfully created' }}
       else
         format.html { render :edit }
       end
@@ -54,6 +47,6 @@ class BrandsController < ApplicationController
   private
 
   def brands_params
-    params.require(:brand).permit(:description, :fantasy_name)
+    params.require(:brand).permit(:description, :fantasy_name, :picture)
   end
 end
