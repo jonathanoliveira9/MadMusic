@@ -10,7 +10,7 @@
     <div class="col-4">
       <ul class="list-group">
         <% @brands.each do |brand| %>
-          <li class="list-group-item list-group-item-action"><b><%= brand.fantasy_name%></b> - <%= brand.description%></li>  
+          <li class="list-group-item list-group-item-action"><b><%= brand.fantasy_name%></b></li>  
         <% end %>
       </ul>
       <%= will_paginate(@brands, renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer)%>
@@ -27,3 +27,4 @@
     </div>
   </div>
 </div>
+<%= javascript_include_tag 'brands/preview_card' %>
