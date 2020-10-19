@@ -24,10 +24,6 @@ RSpec.describe BrandsController, type: :controller do
       expect(response).to have_http_status(:ok)
     end
 
-    it `assigns @brand` do
-      expect(assigns(:brand)).to eq(brand)
-    end
-
     it `render the :show template` do
       expect(response).to render_template :show
     end
@@ -75,7 +71,7 @@ RSpec.describe BrandsController, type: :controller do
       expect do
         patch :update, params: { id: brand.id, brand: update_attrs }
       end.to change(Brand, :count).by(1)
-      expect(response).to redirect_to Brand.last
+      expect(response).to redirect_to brands_path
     end
 
     it 'update brand' do
