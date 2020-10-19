@@ -36,6 +36,7 @@ class InstrumentsController < ApplicationController
   end
 
   def update
+    @brands = Brand.all
     @instrument = Instrument.find(params[:id])
     respond_to do |format|
       if @instrument.update(instrument_params)
@@ -58,6 +59,6 @@ class InstrumentsController < ApplicationController
   private
 
   def instrument_params
-    params.require(:instrument).permit(:serie, :description, :line, :price, :brand_id)
+    params.require(:instrument).permit(:serie, :description, :line, :price, :brand_id, :picture)
   end
 end

@@ -19,6 +19,16 @@
     <%= form.label I18n.t('.activerecord.model.instrument.description') %>
     <%= form.text_area :description,  class: "form-control" %>
   </div>  
+  <div class="container">
+    <% if @instrument.picture.attached? %>
+      <%= image_tag @instrument.picture, style: "width: 200px; display: block" %>
+    <% end %>
+  </div>
+  <div>
+    <%= form.label :picture %>
+    <%= form.file_field :picture, class: "form-control" %>
+  </div>
+
   <%= form.submit @instrument.new_record? ? I18n.t('.new') : I18n.t('.update'), class: "btn btn-dark" %>
 <% end %>
 <%= javascript_include_tag 'instruments/select2_form' %>
