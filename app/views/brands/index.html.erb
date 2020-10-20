@@ -10,20 +10,20 @@
     <div class="col-4">
       <ul class="list-group">
         <% @brands.each do |brand| %>
-          <li class="list-group-item list-group-item-action"><b><%= brand.fantasy_name%></b></li>  
+          <li class="list-group-item list-group-item-action", value="<%=brand.id%>"><b><%= brand.fantasy_name%></b></li>
         <% end %>
       </ul>
       <%= will_paginate(@brands, renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer)%>
     </div>
-    <div class="col-8" >
+    <div class="col-8">
       <div class="card" style="width: 25rem; height: 25rem;">
         <img class="card-img-top" src="..." alt="Card image cap">
-          <div class="card-body">
-        <h5 class="card-title">Preview</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Edit</a>
+        <div class="card-body">
+          <h5 class="card-title">Preview</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Edit</a>
+        </div>
       </div>
-    </div>
     </div>
   </div>
 </div>
