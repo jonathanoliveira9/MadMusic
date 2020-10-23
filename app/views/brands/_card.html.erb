@@ -1,7 +1,12 @@
- <div class="card" style="width: 25rem; height: 25rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-  <h5 class="card-title">Preview</h5>
-  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <a href="#" class="btn btn-primary">Edit</a>
+<div class="card" style="width: 25rem; ">
+  <% if brand.picture.attached? %>
+    <%= image_tag brand.picture, class: "card-img-top" %>
+  <% else %>
+    <%= image_tag 'brand_default.jpg', class: "card-img-top" %>
+  <% end %>
+  <div class="card-body">
+    <h5 class="card-title"><%= brand.fantasy_name %></h5>
+    <p class="card-text"><%= brand.description %></p>
+    <%= link_to 'Edit', edit_brand_path(brand), class: "btn btn-primary" %>
+  </div>
 </div>

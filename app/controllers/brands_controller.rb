@@ -20,13 +20,12 @@ class BrandsController < ApplicationController
       end
     end
   end
-  
+
   def show
     @brand = Brand.find(params[:id])
-
     respond_to do |format|
       format.js
-    end 
+    end
   end
 
   def edit

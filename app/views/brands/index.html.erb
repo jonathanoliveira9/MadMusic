@@ -15,16 +15,8 @@
       </ul>
       <%= will_paginate(@brands, renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer)%>
     </div>
-    <div class="col-8" id="render_here"></div>
+    <div class="col-8" id="show_preview"></div>
     </div>
   </div>
 </div>
-
-<script>
-$(document).ready(function(){
-  $('li').click(function(){
-    $.get(`brands/${this.value}`)
-  })
-})
-  
-</script>
+<%= javascript_include_tag 'brands/preview_card' %>
