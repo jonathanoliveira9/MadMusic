@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $('li').click(function(){
+  $('li').filter('.list-group-item').click(function(){
     $.get(`brands/${this.value}`)
   })
 })
