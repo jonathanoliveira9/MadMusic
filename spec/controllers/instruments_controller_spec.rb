@@ -34,7 +34,7 @@ RSpec.describe InstrumentsController, type: :controller do
   end
 
   describe `GET #new` do
-    before { get :new, params: {} }
+    before { get :new, params: {}, xhr: true }
     it `has 200 status code` do
       expect(response).to have_http_status(:ok)
     end
