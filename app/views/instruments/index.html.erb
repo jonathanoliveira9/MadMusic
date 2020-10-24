@@ -25,6 +25,9 @@
           <h5 class="card-title"><%= instrument.brand.fantasy_name %> - <%= instrument.serie %></h5>
           <h6 class="card-subtitle mb-2 text-muted"><b><%= t('.price') %>:</b> <%= instrument.price %></h6>
           <p class="card-text"><%= instrument.description %></p>
+          <%= link_to  edit_instrument_path(instrument), remote: :true, class: 'card-link', style: 'text-decoration:none;' do %>
+            <i class="fas fa-pen-square"></i>
+          <% end %>
           <%= link_to  edit_instrument_path(instrument),  class: 'card-link', style: 'text-decoration:none;' do %>
             <i class="fas fa-pen-square"></i>
           <% end %>

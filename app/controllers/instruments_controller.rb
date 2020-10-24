@@ -36,6 +36,9 @@ class InstrumentsController < ApplicationController
   def edit
     @instrument = Instrument.find(params[:id])
     @brands = Brand.all
+    respond_to do |format|
+      format.js
+    end
   end
 
   def update
