@@ -16,6 +16,9 @@ class InstrumentsController < ApplicationController
   def new
     @instrument = Instrument.new
     @brands = Brand.all
+    respond_to do |format|
+      format.js
+    end
   end
 
   def create
@@ -25,7 +28,8 @@ class InstrumentsController < ApplicationController
         format.html { redirect_to instruments_path, flash: { success: 'Instrument was successfully created'} }
       else
         flash['error'] = @instrument.errors.full_messages
-        format.html { render :new }
+        format.js
+        format.json { render json: @instrument.errors, status: :unprocessable_entity}
       end
     end
   end
@@ -33,6 +37,9 @@ class InstrumentsController < ApplicationController
   def edit
     @instrument = Instrument.find(params[:id])
     @brands = Brand.all
+    respond_to do |format|
+      format.js
+    end
   end
 
   def update

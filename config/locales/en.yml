@@ -49,6 +49,8 @@ en:
       waiting: Waiting to click any brand...
     new:
       register_brand: Register Brand
+    edit:
+      edit_brand: Edit Brand
   instruments:
     index:
       new: New

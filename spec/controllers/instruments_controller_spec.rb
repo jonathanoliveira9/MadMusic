@@ -34,7 +34,7 @@ RSpec.describe InstrumentsController, type: :controller do
   end
 
   describe `GET #new` do
-    before { get :new, params: {} }
+    before { get :new, params: {}, xhr: true }
     it `has 200 status code` do
       expect(response).to have_http_status(:ok)
     end
@@ -54,7 +54,7 @@ RSpec.describe InstrumentsController, type: :controller do
 
     it 'saves new instrument' do
       expect do
-        post :create, params: { instrument: instrument_params.merge({brand_id: brand.id})}
+        post :create, params: { instrument: instrument_params.merge({ brand_id: brand.id }), xhr: true }
       end.to change(Instrument, :count).by(1)
       expect(response).to redirect_to instruments_path
     end
@@ -62,9 +62,8 @@ RSpec.describe InstrumentsController, type: :controller do
     it 'don´t save instrument' do
       expect do
         instrument_params.shift
-        post :create, params: { instrument: instrument_params }
+        post :create, params: { instrument: instrument_params, format: :js }
       end.to change(Instrument, :count).by(0)
-      expect(response).to render_template(:new)
     end
   end
 

@@ -12,9 +12,12 @@
       <%= image_tag @brand.picture, style: "width: 200px; display: block" %>
     <% end %>
   </div>
-    <div>
+  <div>
     <%= form.label :picture %>
     <%= form.file_field :picture, class: "form-control" %>
   </div>
-  <%= form.submit @brand.new_record? ? I18n.t('.new') : I18n.t('.update'), class: 'btn btn-dark' %>
+  <div class="modal-footer">
+    <%= form.submit @brand.new_record? ? I18n.t('.new') : I18n.t('.update'), class: 'btn btn-dark' %>
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  </div>
 <% end %>

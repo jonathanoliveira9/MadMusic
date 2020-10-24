@@ -1,7 +1,7 @@
 <div class="p-4">
   <div class="container">
     <div>
-      <%= link_to t('.new'), new_brand_path, class: "btn btn-dark"  %>
+      <%= link_to t('.new'), new_brand_path, remote: :true, class: "btn btn-dark"  %>
     </div>
   </div>
 </div>
@@ -28,4 +28,5 @@
     <div class="col-8" id="show_preview"></div></div>
   </div>
 </div>
+<%= render 'modal' %>
 <%= javascript_include_tag 'brands/preview_card' %>

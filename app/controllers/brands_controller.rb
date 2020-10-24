@@ -8,6 +8,9 @@ class BrandsController < ApplicationController
 
   def new
     @brand = Brand.new
+    respond_to do |format|
+      format.js
+    end
   end
 
   def create
@@ -30,6 +33,9 @@ class BrandsController < ApplicationController
 
   def edit
     @brand = Brand.find(params[:id])
+    respond_to do |format|
+      format.js
+    end
   end
 
   def update
