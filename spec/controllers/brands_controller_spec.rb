@@ -19,7 +19,7 @@ RSpec.describe BrandsController, type: :controller do
 
   describe 'GET #show' do
     let(:brand) { create(:brand) }
-    before { get :show, params: { id: brand.id } }
+    before { get :show, params: { id: brand.id }, xhr: true }
     it `has 200 status code` do
       expect(response).to have_http_status(:ok)
     end

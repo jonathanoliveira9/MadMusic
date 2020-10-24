@@ -46,6 +46,7 @@ en:
   brands:
     index:
       new: Novo
+      waiting: Waiting to click any brand...
     new:
       register_brand: Register Brand
   instruments:
