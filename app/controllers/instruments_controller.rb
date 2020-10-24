@@ -28,7 +28,8 @@ class InstrumentsController < ApplicationController
         format.html { redirect_to instruments_path, flash: { success: 'Instrument was successfully created'} }
       else
         flash['error'] = @instrument.errors.full_messages
-        format.html { render :new }
+        format.js
+        format.json { render json: @instrument.errors, status: :unprocessable_entity}
       end
     end
   end
