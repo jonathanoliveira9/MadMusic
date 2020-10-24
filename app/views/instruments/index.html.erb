@@ -9,6 +9,7 @@
 <div class="container">
   <div>
     <%= link_to t('.new'), new_instrument_path, class: "btn btn-dark"  %>
+    <%= link_to t('.new'), new_instrument_path, remote: :true, class: "btn btn-dark" %>
   </div>
 </div>
 <div class="container">
