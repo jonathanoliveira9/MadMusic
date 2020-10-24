@@ -28,9 +28,6 @@
           <%= link_to  edit_instrument_path(instrument), remote: :true, class: 'card-link', style: 'text-decoration:none;' do %>
             <i class="fas fa-pen-square"></i>
           <% end %>
-          <%= link_to  edit_instrument_path(instrument),  class: 'card-link', style: 'text-decoration:none;' do %>
-            <i class="fas fa-pen-square"></i>
-          <% end %>
           <%= link_to  instrument, method: :delete, data: { confirm: 'Are you sure you want to delete this alert?' } do %>
             <i class="fas fa-trash-alt"></i>
           <% end %>

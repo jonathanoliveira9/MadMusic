@@ -28,7 +28,9 @@
     <%= form.label :picture %>
     <%= form.file_field :picture, class: "form-control" %>
   </div>
-
-  <%= form.submit @instrument.new_record? ? I18n.t('.new') : I18n.t('.update'), class: "btn btn-dark" %>
+  <div class="modal-footer">
+    <%= form.submit @instrument.new_record? ? I18n.t('.new') : I18n.t('.update'), class: "btn btn-dark" %>
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  </div>
 <% end %>
 <%= javascript_include_tag 'instruments/select2_form' %>
