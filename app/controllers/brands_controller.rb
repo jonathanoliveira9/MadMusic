@@ -8,6 +8,9 @@ class BrandsController < ApplicationController
 
   def new
     @brand = Brand.new
+    respond_to do |format|
+      format.js
+    end
   end
 
   def create
