@@ -16,6 +16,9 @@ class InstrumentsController < ApplicationController
   def new
     @instrument = Instrument.new
     @brands = Brand.all
+    respond_to do |format|
+      format.js
+    end
   end
 
   def create
