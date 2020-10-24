@@ -18,6 +18,8 @@ pt-BR:
       waiting: Aguardando clicar em alguma marca...
     new:
       register_brand: Registrar Marca
+    edit:
+      edit_brand: Editar Marca
   instruments:
     index:
       new: Novo
