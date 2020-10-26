@@ -1,4 +1,5 @@
 class BrandsController < ApplicationController
+  before_action :authenticate_user!
   def index
     @brands = Brand.paginate(page: params[:page])
     respond_to do |format|

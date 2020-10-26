@@ -1,4 +1,5 @@
 class InstrumentsController < ApplicationController
+  before_action :authenticate_user!
   def index
     @instruments = Instrument.paginate(page: params[:page])
     respond_to do |format|
