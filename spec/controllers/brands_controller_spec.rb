@@ -1,7 +1,9 @@
 require 'rails_helper'
+require_relative "../support/devise"
 
 RSpec.describe BrandsController, type: :controller do
   describe 'GET #index' do
+    login_user
     let(:brands) { create_list(:brand, 2) }
     before { get :index }
     it `assigns @brands` do
@@ -18,6 +20,7 @@ RSpec.describe BrandsController, type: :controller do
   end
 
   describe 'GET #show' do
+    login_user
     let(:brand) { create(:brand) }
     before { get :show, params: { id: brand.id }, xhr: true }
     it `has 200 status code` do
@@ -30,6 +33,7 @@ RSpec.describe BrandsController, type: :controller do
   end
 
   describe `GET #new` do
+  login_user
     before { get :new, params: {}, xhr: true }
     it `has 200 status code` do
       expect(response).to have_http_status(:ok)
@@ -45,6 +49,7 @@ RSpec.describe BrandsController, type: :controller do
   end
 
   describe 'POST #create' do
+    login_user
     let(:brand_params) { attributes_for(:brand) }
 
     it 'saves new brand' do
@@ -64,6 +69,7 @@ RSpec.describe BrandsController, type: :controller do
   end
 
   describe 'PATCH #update' do
+    login_user
     let(:brand) { create(:brand) }
     let(:update_attrs) { { description: 'none' } }
 
@@ -87,6 +93,7 @@ RSpec.describe BrandsController, type: :controller do
   end
 
   describe 'DELETE #destroy' do
+    login_user
     let(:brand) { create(:brand) }
     it 'delete the brand' do
       expect do

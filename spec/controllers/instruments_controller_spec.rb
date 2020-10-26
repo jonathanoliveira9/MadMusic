@@ -1,7 +1,10 @@
 require 'rails_helper'
+require_relative "../support/devise"
 
 RSpec.describe InstrumentsController, type: :controller do
+
   describe 'GET #index' do
+    login_user
     let(:instruments) { create_list(:instrument, 2) }
     before { get :index }
     it `assigns @instruments` do
@@ -18,6 +21,8 @@ RSpec.describe InstrumentsController, type: :controller do
   end
 
   describe 'GET #show' do
+    login_user
+
     let(:instrument) { create(:instrument) }
     before { get :show, params: { id: instrument.id } }
     it `has 200 status code` do
@@ -34,6 +39,8 @@ RSpec.describe InstrumentsController, type: :controller do
   end
 
   describe `GET #new` do
+  login_user
+
     before { get :new, params: {}, xhr: true }
     it `has 200 status code` do
       expect(response).to have_http_status(:ok)
@@ -49,6 +56,8 @@ RSpec.describe InstrumentsController, type: :controller do
   end
 
   describe 'POST #create' do
+    login_user
+
     let(:instrument_params) { attributes_for(:instrument) }
     let(:brand) { create(:brand) }
 
@@ -68,6 +77,8 @@ RSpec.describe InstrumentsController, type: :controller do
   end
 
   describe 'PATCH #update' do
+    login_user
+
     let(:instrument) { create(:instrument) }
     let(:update_attrs) { { price: 0, description: 'none' } }
 
@@ -92,6 +103,8 @@ RSpec.describe InstrumentsController, type: :controller do
   end
 
   describe 'DELETE #destroy' do
+    login_user
+
     let(:instrument) { create(:instrument) }
     it 'delete the instrument' do
       expect do
