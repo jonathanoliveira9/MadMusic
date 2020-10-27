@@ -1,6 +1,8 @@
 <div class="card" style="width: 25rem; ">
   <% if brand.picture.attached? %>
-    <%= image_tag brand.picture, class: "card-img-top" %>
+     <div style="background-color: black; width: 100%">
+      <%= image_tag brand.picture.variant(resize: '397x298'), class: 'mx-auto d-block' %> 
+    </div>
   <% else %>
     <%= image_tag 'brand_default.jpg', class: "card-img-top" %>
   <% end %>
